@@ -5,6 +5,8 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/views/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/ui-kit/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -27,6 +29,9 @@ module.exports = {
           700: '#1F3C21',
           800: '#18301A',
           900: '#122413',
+        },
+        'pri-rgb': {
+          0: "rgba(255, 255, 255, 0.2)",
         },
         'sec': {
           100: '#E2E46F',
@@ -69,6 +74,99 @@ module.exports = {
           800: '#065F39',
           900: '#05472B',
         }
+      },
+      spacing: {
+        sm: '8px',
+        md: '12px',
+        lg: '16px',
+        xl: '18px',
+        "2xl": '24px',
+      },
+      keyframes: {
+        wave: {
+          '0%': {
+            transform: 'rotate(0.0deg)'
+          },
+          '10%': {
+            transform: 'rotate(14deg)'
+          },
+          '20%': {
+            transform: 'rotate(-8deg)'
+          },
+          '30%': {
+            transform: 'rotate(14deg)'
+          },
+          '40%': {
+            transform: 'rotate(-4deg)'
+          },
+          '50%': {
+            transform: 'rotate(10.0deg)'
+          },
+          '60%': {
+            transform: 'rotate(0.0deg)'
+          },
+          '100%': {
+            transform: 'rotate(0.0deg)'
+          },
+        },
+
+        'infinity-1': {
+          '0%': {
+            transform: 'translateX(100%)'
+          },
+
+          '100%': {
+            transform: 'translateX(-100%)'
+          }
+        },
+
+        'infinity-2': {
+          '0%': {
+            transform: 'translateX(0)'
+          },
+
+          '100%': {
+            transform: 'translateX(-200%)'
+          }
+        }
+      },
+      animation: {
+        'waving-hand': 'wave 2s linear infinite',
+        'scroll-infinity-1': 'infinity-1 100s linear infinite',
+        'scroll-infinity-2': 'infinity-2 100s linear infinite',
+      },
+      screens: {
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+
+        'xxl': '1400px',
+        // => @media (min-width: 1400px) { ... }
+
+        '2xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
+      },
+
+      container: {
+        // you can configure the container to be centered
+        center: true,
+
+        // default breakpoints but with 40px removed
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1536px',
+        },
       }
     },
   },
